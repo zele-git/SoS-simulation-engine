@@ -30,7 +30,7 @@ public class AmbulanceTransferToHospital extends AmbulanceAction {
     public void onUpdate() {
         ambulance.moveTo(hospital.position);
         if(ambulance.isArrivedAt(hospital.position)) {
-            hospital.hospitalize(patient);
+            hospital.hospitalize(patient);// shouldn't this be a message to hospital object ? 
             world.transferCounter++;
             ambulance.transferImage.visible(false);
             ambulance.defaultImage.visible(true);
